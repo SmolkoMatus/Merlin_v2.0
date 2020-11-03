@@ -4,14 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-
-namespace Merlin_v2._0
+namespace Merlin_v2._0.Actors
 {
-    class Program
+    public interface IMovable
     {
-        static void Main(string[] args)
-        {
+        //what????? nothing HERE!
 
-        }
     }
 }

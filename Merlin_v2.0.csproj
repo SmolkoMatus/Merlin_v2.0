@@ -43,8 +43,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Actors\AbstractActor.cs" />
     <Compile Include="Actors\Enemy.cs" />
+    <Compile Include="Actors\IMovable.cs" />
     <Compile Include="Actors\Player.cs" />
+    <Compile Include="Commands\Fall.cs" />
+    <Compile Include="Commands\Gravity.cs" />
+    <Compile Include="Commands\IAction.cs" />
+    <Compile Include="Commands\Jump.cs" />
+    <Compile Include="Commands\Move.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -52,11 +59,31 @@
     <None Include="App.config" />
     <None Include="packages.config" />
     <None Include="Raylib-cs.targets" />
+    <None Include="Resources\maps\map01.tmx" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Commands\" />
     <Folder Include="Items\" />
-    <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\sprites\enemy.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\maps\map01.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\maps\tilesets\create-high-quality-pixel-art-sprites-tilesets-and-icons %281%29.png" />
+    <Content Include="Resources\maps\tilesets\create-high-quality-pixel-art-sprites-tilesets-and-icons.png" />
+    <Content Include="Resources\maps\tilesets\d6qn90d-27c7c459-10b7-464d-8762-b032ebdfb327.png" />
+    <Content Include="Resources\maps\tilesets\oga_preview.png" />
+    <Content Include="Resources\maps\tilesets\PC Computer - RPG Maker MV - Outside.png" />
+    <Content Include="Resources\maps\tilesets\PYqUByo.png" />
+    <Content Include="Resources\maps\tilesets\rpg-maker-vx-rtp-tileset-png-clipart.jpg" />
+    <Content Include="Resources\maps\tilesets\terrain_atlas.png" />
+    <Content Include="Resources\maps\tilesets\TileA4.png" />
+    <Content Include="Resources\maps\tilesets\tumblr_pae601qXqV1qju22qo1_400.png" />
+    <Content Include="Resources\sprites\player.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

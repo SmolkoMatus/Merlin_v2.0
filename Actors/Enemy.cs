@@ -1,13 +1,10 @@
-﻿using Merlin.Commands;
-using Merlin2d.Game;
-using Merlin2d.Game.Actions;
-using Merlin2d.Game.Actors;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
-namespace Merlin.Actors
+namespace Merlin_v2._0.Actors
 {
     public class Enemy : AbstractActor
     {
@@ -28,7 +25,7 @@ namespace Merlin.Actors
             animationEnemy = new Animation("resources/enemy.png", 64, 58);
             SetAnimation(animationEnemy);
             animationEnemy.Start();
-            SetPosition(250, 120);           
+            SetPosition(250, 120);
             //followPlayer = new Move(this, 1, , 0);
             this.player = player;
             //move = new Move(this,1,xEnemy,0);
@@ -54,7 +51,7 @@ namespace Merlin.Actors
                     new Move(this, 1, rnd, 0).Execute();
                 }
             }
-            if(positionPlayerX == this.GetX())
+            if (positionPlayerX == this.GetX())
             {
                 Console.WriteLine("Merlin is caught!");
             }
@@ -63,12 +60,12 @@ namespace Merlin.Actors
 
         private int SeeNumber(int xP, int xE, int yP, int yE)
         {
-            int finalNumber,dimenseFirst,dimenseSecond;
+            int finalNumber, dimenseFirst, dimenseSecond;
 
             dimenseFirst = xP - xE;
             dimenseSecond = yP - yE;
 
-            if(dimenseFirst <= 0)
+            if (dimenseFirst <= 0)
             {
                 finalNumber = dimenseFirst * (-1);
             }
@@ -78,12 +75,12 @@ namespace Merlin.Actors
             }
             return finalNumber;
         }
-                  
+
         private int Follow(int xP, int xE, int yP, int yE)
         {
-            int finalNumber, left, right , up, down;
+            int finalNumber, left, right, up, down;
 
-           if(xP - xE >= 0)
+            if (xP - xE >= 0)
             {
                 finalNumber = 3;
             }
